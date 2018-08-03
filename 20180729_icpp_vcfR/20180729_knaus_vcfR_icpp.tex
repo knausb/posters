@@ -1,0 +1,99 @@
+\documentclass[final]{beamer} % beamer 3.10: do NOT use option hyperref={pdfpagelabels=false} !
+% Began with this: https://tex.stackexchange.com/a/24266
+
+\mode<presentation> {  %% check http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php for examples
+  \usetheme{Berlin}    %% you should define your own theme e.g. for big headlines using your own logos 
+%  \usetheme{metropolis}
+
+}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usefonttheme[onlymath]{serif}
+\boldmath
+\usepackage[size=custom,width=116,height=106.5,scale=3]{beamerposter} % e.g. for custom size poster
+\usepackage{graphicx}
+%\usepackage{wrapfig}
+
+
+\definecolor{forest_green}{RGB}{34,139,34}
+\definecolor{usda_green}{RGB}{0,89,65}
+%\setbeamercolor{title}{fg=forest_green}
+%\setbeamercolor{frametitle}{fg=forest_green}
+%\setbeamercolor{structure}{fg=forest_green}
+\setbeamercolor{structure}{fg=usda_green}
+
+\title[Detecting CNV with vcfR]{Detection of copy number variation for chromosomal sliding windows using high throughput sequencing data in the R environment}
+\author[Knaus \& Gr\"unwald]{Brian J. Knaus and Niklaus J. Gr\"unwald}
+\institute[USDA, ARS]{USDA, ARS, Horticultural Crops Research Unit}
+\date{July 29th, 2018}
+
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.7\paperwidth}
+        \vskip8ex
+        \raggedleft
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\large{\inserttitle}}\\[1ex]}
+        \usebeamercolor{author in headline}{\color{fg}\normalsize{\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\small{\insertinstitute}\\[1ex]}     
+      \end{column}
+      \begin{column}{.15\paperwidth}
+        \vskip8ex
+        \begin{center}
+          \includegraphics[height=10cm]{./figures/usda-symbol.pdf}
+          %Logo goes here.
+        \end{center}
+        \vskip2ex
+      \end{column}
+      \begin{column}{.02\paperwidth}
+      \end{column}
+    \end{columns}
+    \vskip2ex
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{0pt}
+  \end{beamercolorbox}
+}
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+
+  \leavevmode%
+  \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in head/foot}%
+    \texttt{http://grunwaldlab.cgrb.oregonstate.edu; https://doi.org/10.3389/fgene.2018.00123;  https://CRAN.R-project.org/package=vcfR}
+    \hfill
+    \texttt{Knaus and Gr\"unwald: CNV in vcfR}
+    \vskip1ex
+  \end{beamercolorbox}
+  \vskip0pt%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{navigation symbols}{}
+
+\begin{document}
+  \begin{frame}{}
+
+\input{row1.tex}
+
+\vspace{5mm}
+
+\input{row2.tex}
+
+\vspace{5mm}
+
+\input{row3.tex}
+
+  \end{frame}
+\end{document}
+
