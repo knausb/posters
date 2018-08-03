@@ -1,0 +1,109 @@
+\documentclass[final]{beamer} % beamer 3.10: do NOT use option hyperref={pdfpagelabels=false} !
+% Began with this: https://tex.stackexchange.com/a/24266
+
+\mode<presentation> {  %% check http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php for examples
+  \usetheme{Berlin}    %% you should define your own theme e.g. for big headlines using your own logos 
+%  \usetheme{metropolis}
+
+}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usefonttheme[onlymath]{serif}
+\boldmath
+\usepackage[size=custom,width=116,height=106.5,scale=3]{beamerposter} % e.g. for custom size poster
+\usepackage{graphicx}
+%\usepackage{wrapfig}
+\usepackage{lmodern}       
+
+\definecolor{forest_green}{RGB}{34,139,34}
+\definecolor{usda_green}{RGB}{0,89,65}
+\definecolor{dark_magenta}{RGB}{139,0,139}
+\definecolor{peru}{RGB}{205,133,63}
+
+
+%\setbeamercolor{title}{fg=forest_green}
+%\setbeamercolor{frametitle}{fg=forest_green}
+%\setbeamercolor{structure}{fg=forest_green}
+%\setbeamercolor{structure}{fg=usda_green}
+%\setbeamercolor{structure}{fg=dark_magenta}
+\setbeamercolor{structure}{fg=peru}
+
+\title[Detecting CNV with vcfR]{Copy number variation appears increased in clonal lineages over sexual lineages of \protect\emph{Phytophthora infestans}}
+\author[Knaus et al.]{Brian J. Knaus$^{1}$, Javier F. Tabima$^{2}$, Shankar K. Shakya$^{2}$,\\ Howard S. Judelson$^{3}$, and Niklaus J. Gr\"unwald$^{1}$}
+\institute[USDA, ARS]{$^{1}$USDA, ARS, Horticultural Crops Research Unit; $^{2}$Oregon State University;\\$^{3}$University of California Riverside}
+\date{July 29th, 2018}
+
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.7\paperwidth}
+        \vskip8ex
+        \raggedleft
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\large{\inserttitle}}\\[1ex]}
+        \usebeamercolor{author in headline}{\color{fg}\normalsize{\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\small{\insertinstitute}\\[1ex]}     
+      \end{column}
+      \begin{column}{.15\paperwidth}
+        \vskip8ex
+        \begin{center}
+          \includegraphics[height=8cm]{./figures/usda-symbol.pdf}\\
+          \vspace{3mm}
+          \includegraphics[height=4cm]{./figures/osu_logo.pdf}\\
+          \vspace{3mm}
+          \includegraphics[height=2.5cm]{./figures/ucr_logo_cmyk.pdf}
+          %Logo goes here.
+        \end{center}
+        \vskip2ex
+      \end{column}
+      \begin{column}{.02\paperwidth}
+      \end{column}
+    \end{columns}
+    \vskip2ex
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{0pt}
+  \end{beamercolorbox}
+}
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+
+  \leavevmode%
+  \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in head/foot}%
+    \texttt{http://grunwaldlab.cgrb.oregonstate.edu}
+    \hfill
+    \texttt{Knaus et al.: CNV in \textit{P. infestans}}
+    \vskip1ex
+  \end{beamercolorbox}
+  \vskip0pt%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{navigation symbols}{}
+
+\begin{document}
+  \begin{frame}{}
+
+\input{row1.tex}
+
+\vspace{5mm}
+
+\input{row2.tex}
+
+\vspace{5mm}
+
+\input{row3.tex}
+
+  \end{frame}
+\end{document}
+
